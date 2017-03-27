@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="19dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imie:"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBaseline="@+id/name"
+            android:layout_alignBottom="@+id/name"
+            android:id="@+id/first_name"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_toRightOf="@+id/first_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nazwisko:"
+            android:id="@+id/last_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignBottom="@+id/surname"
+            android:layout_alignBaseline="@+id/surname"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/last_name"
+            android:layout_below="@+id/name"
+            android:id="@+id/surname"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Liczba ocen:"
+            android:id="@+id/textview_oceny"
+            android:layout_below="@+id/last_name"
+            android:layout_alignBaseline="@+id/oceny"
+            android:layout_alignBottom="@+id/oceny"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/oceny"
+            android:digits="0123456789"
+            android:layout_toRightOf="@id/textview_oceny"
+            android:layout_below="@+id/surname"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/oceny"
+            android:text="Twoja średnia: "
+            android:visibility="gone"
+            android:id="@+id/srednia"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Oceny"
+            android:onClick="onClick"
+            android:visibility="gone"
+            android:id="@+id/buttonMain"
+            android:layout_below="@+id/oceny"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="rezultat"
+            android:id="@+id/buttonRezultat"
+            android:visibility="gone"
+            android:onClick="onClickRezult"
+            android:layout_below="@+id/srednia"
+            />
+
+
+</RelativeLayout>
